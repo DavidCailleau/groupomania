@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fiche article - IntraMarket</title>
+    <meta
+      name="description"
+      content="Fiche article - IntraMarket"
+    />
+    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../css/images/favicon.JPG"
+    />
+
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/media.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="header">
+        
+            <a href="accueil.html" class="accueil"
+              ><img src="../css/images/logo.png" alt="Logo Groupomania"
+            /></a>
+            <nav>
+                <div class="header-lien">
+                  <ul class="header-navigation">
+                    <li class="nav-item">
+                      <a class="nav-link" href="accueil.html"
+                        >Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="intramarket.html"
+                          >intraMarket</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="intranetwork.html"
+                          >IntraNetwork</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+              <button class="logout" type="button" name="logout">
+                Se déconnecter
+              </button>
+        
+          
+        </div>
+      </header>
+
+      <main>
+        <div id="fiche-article">
+          <h1>IntraMarket - Fiche article</h1>
+            <div id="info_article">
+              
+                <h2 id="nom-single-article">
+                </h2>
+                <p id="date-annonce"></p>
+                <div id="image-single-article">
+                </div>
+                <p id="description-single-article"></p>
+             <p id="prix-single-article"></p>
+                
+
+             <div id="action-button-article">          
+            </div>
+              </div>
+             
+            
+          </div>
+      </main>
+      <footer>
+        <div class="footer">
+          <p>Copyright © 2020 Groupomania Intranet - Tous droits réservés</p>
+          <p>Projet 7 - Parcours Developpeur Web - OpenClassrooms</p>
+        </div>
+      </footer>
+
+    </div>
+    <script src="../js/authFront.js"></script>
+ 
+    <script src="../js/logout.js"></script>
+    <script src="../js/getArticle.js"></script>
+    <script>getOneArticle();</script>
+  </body>
+</html>

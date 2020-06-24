@@ -1,0 +1,149 @@
+@media (max-width: 1273px) {
+    .header .header-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        
+      }
+      .header .header-navigation .nav-item {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1em;
+      }
+}
+
+@media (max-width: 1024px) {
+    .accueil img{
+        width:80%;
+    }
+}
+
+    @media (max-width: 768px) {
+
+        h1{
+            font-size:1.4em;
+        }
+
+        #form_login, #form_signup{
+            width:90%;
+        }
+
+        input{
+            width:80%;
+        }
+        .header{
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        .accueil img{
+            width:300px;
+        }
+
+        .logout{
+            width:200px;
+        }
+
+ .cadre{
+     width:95%;
+ }
+
+ #description,
+#new-message {
+  width: 95%;
+}
+
+#image-market, #article-nom, #title-message, #imageUrl, #img-update-message, #img-update-article {
+    width: 85%;
+    height:auto;
+}
+
+#page-network{
+    margin-left:0;
+    margin-right:0;
+    text-align:center;
+}
+.message {
+    width:95%;
+    font-size:0.9em;
+}
+.zone_title, #titre-single-message{
+    font-size: 1.2em;
+}
+#texte-single-message{
+    font-size: 0.9em;
+}
+
+
+.commentaire{
+    margin-left:2em;
+    font-size:0.8em;
+
+}
+#ajout-post, #ajout-article{
+    margin-left:0;
+}
+
+#ajouter-article{
+    text-align: center;
+}
+.image-network, #image-single-message img {
+    max-width: 98%;
+    max-height: 400px;
+}
+
+.menu-navigation{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+}
+
+ ul{
+    padding-left: 0em;
+}
+
+.nav-menu{
+    width:auto;
+    max-width:400px;
+    height:auto;
+    max-height: 340px;
+}
+
+.profil, #page-liste-user{
+    width:95%;
+    font-size: 1em;
+    margin:auto;
+}
+
+.profil h1, #page-liste-user h1{
+    font-size:1.4em;
+}
+.profil p{
+    margin:auto;
+}
+.profil button{
+    width:60%;
+    margin:auto;
+}
+#profil-name, #profil-firstname, #profil-mail, #profil-button, #profil-role {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.user_element{
+    display: flex;
+    flex-direction: column;
+}
+
+#update-message, #description-update{
+    width:95%;
+}
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulaire d'ajout d'articles - IntraMarket</title>
+    <meta
+      name="description"
+      content="Formulaire d'ajout d'articles - IntraMarket"
+    />
+    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../css/images/favicon.JPG"
+    />
+
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/media.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="header">
+        
+            <a href="accueil.html" class="accueil"
+              ><img src="../css/images/logo.png" alt="Logo Groupomania"
+            /></a>
+            <nav>
+                <div class="header-lien">
+                  <ul class="header-navigation">
+                    <li class="nav-item">
+                      <a class="nav-link" href="accueil.html"
+                        >Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="intramarket.html"
+                          >IntraMarket</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="intranetwork.html"
+                          >IntraNetwork</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+              <button class="logout" type="button" name="logout">
+                Se déconnecter
+              </button>
+        
+          
+        </div>
+      </header>
+
+      <main>
+        <div id="page-form-market">
+        <h1>Ajouter un objet à vendre sur IntraMarket</h1>
+        <div class="cadre">
+            <form method="post" name="form_market" id="form_market">
+              <div class="form-group">
+                <label for="article-nom">
+                  Nom de l'objet à vendre
+                </label>
+                <input
+                  type="text"
+                  id="article-nom"
+                  name="article-nom"
+                  class="form-control"
+                  required
+                  autofocus
+                  placeholder="Que voulez vous vendre ?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="description">
+                  Description de l'objet à vendre
+                </label>
+                <textarea
+                  type="text"
+                  id="description"
+                  name="description"
+                  class="form-control"
+                  rows="4"
+                  cols="50"
+                  required
+                  placeholder="Décrivez l'objet à vendre"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="image-market">
+                  Photo de l'objet à vendre
+                </label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  id="image-market"
+                  name="image-market"
+                  class="form-control"
+                  required
+                  #imageInput (change)="onFileAdded($event)"
+                />
+                <img [src]="imagePreview" *ngIf="imagePreview" style="max-height: 100px;display:block;margin-top:10px">
+              </div>
+              <div class="form-group">
+                <label for="prix">
+                  Prix de l'objet en €
+                </label>
+                <input
+                  type="number"
+                  id="prix"
+                  name="prix"
+                  min="1"
+                  class="form-control"
+                  required
+                  placeholder="Ex: 55"
+                />
+              </div>
+
+
+              <button id="validerObjet" type="submit" name="validerObjet">
+                valider votre objet à vendre
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer">
+          <p>Copyright © 2020 Groupomania Intranet - Tous droits réservés</p>
+          <p>Projet 7 - Parcours Developpeur Web - OpenClassrooms</p>
+        </div>
+      </footer>
+
+    </div>
+    <script src="../js/authFront.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/article.js"></script>
+  </body>
+</html>
+
+
+
+
+

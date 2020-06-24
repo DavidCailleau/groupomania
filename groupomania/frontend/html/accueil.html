@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page d'accueil - Groupomania Intranet</title>
+    <meta name="description" content="Page d'accueil - Groupomania Intranet" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../css/images/favicon.JPG"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/media.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="header">
+          <a href="accueil.html" class="accueil"
+            ><img src="../css/images/logo3.png" alt="Logo Groupomania"
+          /></a>
+          <button class="logout" type="button" name="logout">
+            Se déconnecter
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div id="voir-profil">
+          <div id="masquer-profil">
+            <a href="#voir-profil" class="voir-profil">Voir profil</a><a href="#masquer-profil" class="masquer-profil">Masquer profil</a>
+        <div class="profil">
+          <h1>Informations profil Groupomania Intranet</h1>
+          <div id="profil-name">
+            <p>Nom :</p>
+            <p id="profil_nom"></p>
+          </div>
+          <div id="profil-firstname">
+            <p>Prénom :</p>
+            <p id="profil_prenom"></p>
+          </div>
+          <div id="profil-role">
+            <p>Rôle Intranet :</p>
+            <p id="profil_role"></p>
+          </div>
+          <div id="profil-mail">
+            <p>Adresse mail :</p>
+            <p id="profil_email"></p>
+          </div>
+          <div id="profil-button">
+            <button
+              id="suppression-compte"
+              type="button"
+              name="suppression-compte"
+            >
+              Suppression du compte
+            </button>
+          </div>
+        </div>
+          </div>
+        </div>
+        <nav>
+          <div class="menu-lien">
+            <ul class="menu-navigation">
+              <li class="nav-menu" id="menu-intramarket">
+                <a href="intramarket.html">IntraMarket</a>
+                <p>
+                  Mettez en vente vos objets pour qu'ils retrouvent une seconde
+                  vie
+                </p>
+              </li>
+              <li class="nav-menu" id="menu-intranetwork">
+                <a href="intranetwork.html">IntraNetwork</a>
+                <p>
+                  Rejoignez le réseau social de l'entreprise et partagez avec
+                  vos collègues
+                </p>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </main>
+      <footer>
+        <div class="footer">
+          <p>Copyright © 2020 Groupomania Intranet - Tous droits réservés</p>
+          <p>Projet 7 - Parcours Developpeur Web - OpenClassrooms</p>
+        </div>
+      </footer>
+    </div>
+    <script src="../js/authFront.js"></script>
+    <script src="../js/profil.js"></script>
+    <script src="../js/deleteUser.js"></script>
+    <script src="../js/logout.js"></script>
+  </body>
+</html>

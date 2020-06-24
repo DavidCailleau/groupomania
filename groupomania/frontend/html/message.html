@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Message - IntraNetwork</title>
+    <meta name="description" content="Message - IntraNetwork" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../css/images/favicon.JPG"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/media.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="header">
+          <a href="accueil.html" class="accueil"
+            ><img src="../css/images/logo3.png" alt="Logo Groupomania"
+          /></a>
+          <nav>
+            <div class="header-lien">
+              <ul class="header-navigation">
+                <li class="nav-item">
+                  <a class="nav-link" href="accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="intramarket.html">intraMarket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="intranetwork.html">IntraNetwork</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <button class="logout" type="button" name="logout">
+            Se déconnecter
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div id="single-message">
+          <div id="fiche-message">
+            <h1>IntraNetwork - Message</h1>
+            <div class="cadre">
+              <div id="info_message">
+                <div class="info-single-message">
+                  <p id="user-single-message"></p>
+                  <p id="date-single-message"></p>
+                </div>
+                <h2 id="titre-single-message"></h2>
+                <p id="texte-single-message"></p>
+                <div id="image-single-message"></div>
+
+                <div id="action-button-message"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="fiche-commentaire">
+            <h3>IntraNetwork - Commentaires</h3>
+            <p id=nbre-comment> <span id=nbr-commentaires></span> commentair(e)s</p>
+            <div class="cadre">
+              <div id="page-form-commentaire">
+              <div class="cadre">
+                  <form method="post" name="form-commentaire" id="form-commentaire">
+                    <div class="form-group">
+      
+                    <div class="form-group">
+                      <label for="new-commentaire">
+                        Nouveau commentaire
+                      </label>
+                      <textarea
+                        type="text"
+                        id="new-commentaire"
+                        name="new-commentaire"
+                        class="form-control"
+                        rows="10"
+                        cols="50"
+                        required
+                        autofocus
+                        placeholder="Rédigez votre commentaire ici..."
+                      ></textarea>
+                    </div>
+      
+                    <button id="valider-commentaire" type="submit" name="valider-commentaire">
+                      valider votre commentaire
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div id="info_commentaire"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer">
+          <p>Copyright © 2020 Groupomania Intranet - Tous droits réservés</p>
+          <p>Projet 7 - Parcours Developpeur Web - OpenClassrooms</p>
+        </div>
+      </footer>
+    </div>
+    <script src="../js/authFront.js"></script>
+<script src="../js/commentaire.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/getMessage.js"></script>
+    <script>
+      getOneMessage();
+    </script>
+      <script src="../js/getCommentaire.js"></script>
+      <script>getAllCommentaires();</script>
+      
+  </body>
+</html>
