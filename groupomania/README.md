@@ -1,15 +1,34 @@
-# groupomania_app
 
-To run the app:
-1) Clone the repository
+# Projet 7 - Parcours Développeur Web OpenClassrooms
+"Créez un réseau social d'entreprise".
 
-2) Then cd in backend folder
+## Compétences évaluées :
 
-3) In backend folder run: npm install
+- Gérer un stockage de données à l'aide de SQL
+- Personnaliser le contenu envoyé à un client web
+- Implémenter un stockage de données sécurisé en utilisant SQL
+- Authentifier un utilisateur et maintenir sa session
 
-4) In backend folder run: nodemon server
+## Développement
 
-5) Then open index.html file in frontend directory
+La partie frontend du projet est développée en Javascript.
+La partie backend du projet est développée avec NodeJS, Express, et MySQL.
 
 
-Node version: 10.15.3
+## Pré requis
+
+Cloner le repository
+Node JS doit être installé localement sur la machine, ainsi que npm et MySQL
+Côté backend, plusieurs dépendances npm ont été nécessaires : - Bcrypt - Body-Parser - Express - jsonwebtoken - Multer - Nodemon
+La sauvegarde de la base de données groupomania_intra.sql doit être importée
+
+
+## Lancement
+
+Côté backend : - Dans le terminal, se placer dans le dossier backend du projet et taper la commande "nodemon server" - Le backend (API) se lance sur http://localhost:3000/.
+
+Ouvrir ensuite dans votre navigateur, login.html.
+Vous pouvez créer un nouveau compte en cliquant sur le menu concerné ou vous connecter avec un user déjà existant.
+
+Login Admin = cailleau.david@groupomania.com    Mdp = 1234
+Login Basic = diaz.paola@groupomania.com        Mdp = 1234

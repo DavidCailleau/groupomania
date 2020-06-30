@@ -117,7 +117,7 @@ body {
     background-color: darkgray;
     border-radius: 2px;
     box-shadow: 0 0 1em #e2e2e2;
-    color: darkslateblue;
+    color: white;
     margin-left: 2em;
     margin-bottom: 2em;
   }
@@ -308,9 +308,11 @@ body {
     border-top: 1px solid rgba(224, 227, 230, 0.9);
   }
 
-  #titre-single-message, .texte-single-commentaire{
+  #titre-single-message, .texte-single-commentaire, .action-button-commentaire{
     margin-top:0em;
+    margin-bottom: 0.5em;
   }
+  
   .zone_title {
     font-size: 1.5em;
     font-weight: bold;
