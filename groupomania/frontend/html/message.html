@@ -69,37 +69,47 @@
 
           <div id="fiche-commentaire">
             <h3>IntraNetwork - Commentaires</h3>
-            <p id=nbre-comment> <span id=nbr-commentaires></span> commentair(e)s</p>
+            <p id="nbre-comment">
+              <span id="nbr-commentaires"></span> commentair(e)s
+            </p>
             <div class="cadre">
               <div id="page-form-commentaire">
-              <div class="cadre">
-                  <form method="post" name="form-commentaire" id="form-commentaire">
+                <div class="cadre">
+                  <form
+                    method="post"
+                    name="form-commentaire"
+                    id="form-commentaire"
+                  >
                     <div class="form-group">
-      
-                    <div class="form-group">
-                      <label for="new-commentaire">
-                        Nouveau commentaire
-                      </label>
-                      <textarea
-                        type="text"
-                        id="new-commentaire"
-                        name="new-commentaire"
-                        class="form-control"
-                        rows="10"
-                        cols="50"
-                        required
-                        autofocus
-                        placeholder="Rédigez votre commentaire ici..."
-                      ></textarea>
+                      <div class="form-group">
+                        <label for="new-commentaire">
+                          Nouveau commentaire
+                        </label>
+                        <textarea
+                          id="new-commentaire"
+                          name="new-commentaire"
+                          class="form-control"
+                          rows="10"
+                          cols="50"
+                          required
+                          autofocus
+                          placeholder="Rédigez votre commentaire ici..."
+                        ></textarea>
+                      </div>
+
+                      <button
+                        id="valider-commentaire"
+                        type="submit"
+                        name="valider-commentaire"
+                      >
+                        valider votre commentaire
+                      </button>
                     </div>
-      
-                    <button id="valider-commentaire" type="submit" name="valider-commentaire">
-                      valider votre commentaire
-                    </button>
                   </form>
                 </div>
+
+                <div id="info_commentaire"></div>
               </div>
-              <div id="info_commentaire"></div>
             </div>
           </div>
         </div>
@@ -112,14 +122,15 @@
       </footer>
     </div>
     <script src="../js/authFront.js"></script>
-<script src="../js/commentaire.js"></script>
+    <script src="../js/commentaire.js"></script>
     <script src="../js/logout.js"></script>
     <script src="../js/getMessage.js"></script>
     <script>
       getOneMessage();
     </script>
-      <script src="../js/getCommentaire.js"></script>
-      <script>getAllCommentaires();</script>
-      
+    <script src="../js/getCommentaire.js"></script>
+    <script>
+      getAllCommentaires();
+    </script>
   </body>
 </html>

@@ -3,22 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>IntraNetwork - Groupomania Intranet</title>
-    <meta
-      name="description"
-      content="IntraNetwork - Groupomania Intranet"
-    />
-    
+    <meta name="description" content="IntraNetwork - Groupomania Intranet" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    
+
     <link
       rel="shortcut icon"
       type="image/png"
       href="../css/images/favicon.JPG"
     />
-
 
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/media.css" />
@@ -28,39 +24,39 @@
     <div class="page-container">
       <header>
         <div class="header">
-        
-            <a href="accueil.html" class="accueil"
-              ><img src="../css/images/logo3.png" alt="Logo Groupomania"
-            /></a>
-            <nav>
-                <div class="header-lien">
-                  <ul class="header-navigation">
-                    <li class="nav-item">
-                      <a class="nav-link" href="accueil.html"
-                        >Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="intramarket.html"
-                          >IntraMarket</a>
-                      </li>
-                  </ul>
-                </div>
-              </nav>
-              <button class="logout" type="button" name="logout">
-                Se déconnecter
-              </button>
-        
-          
+          <a href="accueil.html" class="accueil"
+            ><img src="../css/images/logo3.png" alt="Logo Groupomania"
+          /></a>
+          <nav>
+            <div class="header-lien">
+              <ul class="header-navigation">
+                <li class="nav-item">
+                  <a class="nav-link" href="accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="intramarket.html">IntraMarket</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <button class="logout" type="button" name="logout">
+            Se déconnecter
+          </button>
         </div>
       </header>
 
       <main>
         <div id="page-network">
           <h1>IntraNetwork Groupomania</h1>
-<div id="ajouter-post">
-    <a href="form-network.html" alt="Ajouter un message"><button id="ajout-post">Ajouter un nouveau message</button></a>
-</div>
-<div id="liste-message"></div>
+          <div id="ajouter-post">
+            <button
+              id="ajout-post"
+              onclick="window.location.href = './form-network.html';"
+            >
+              Ajouter un nouveau message
+            </button>
+          </div>
+          <div id="liste-message"></div>
         </div>
       </main>
       <footer>
@@ -69,11 +65,12 @@
           <p>Projet 7 - Parcours Developpeur Web - OpenClassrooms</p>
         </div>
       </footer>
-
     </div>
     <script src="../js/authFront.js"></script>
     <script src="../js/getMessage.js"></script>
-    <script>getAllMessages();</script>
+    <script>
+      getAllMessages();
+    </script>
     <script src="../js/logout.js"></script>
   </body>
 </html>

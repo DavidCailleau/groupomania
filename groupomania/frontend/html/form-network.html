@@ -7,18 +7,17 @@
       name="description"
       content="Nouveau message network - Groupomania Intranet"
     />
-    
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    
+
     <link
       rel="shortcut icon"
       type="image/png"
       href="../css/images/favicon.JPG"
     />
-
 
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/media.css" />
@@ -28,40 +27,34 @@
     <div class="page-container">
       <header>
         <div class="header">
-        
-            <a href="accueil.html" class="accueil"
-              ><img src="../css/images/logo3.png" alt="Logo Groupomania"
-            /></a>
-            <nav>
-                <div class="header-lien">
-                  <ul class="header-navigation">
-                    <li class="nav-item">
-                      <a class="nav-link" href="accueil.html"
-                        >Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="intramarket.html"
-                          >intraMarket</a>
-                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="intranetwork.html"
-                          >IntraNetwork</a>
-                      </li>
-                  </ul>
-                </div>
-              </nav>
-              <button class="logout" type="button" name="logout">
-                Se déconnecter
-              </button>
-        
-          
+          <a href="accueil.html" class="accueil"
+            ><img src="../css/images/logo3.png" alt="Logo Groupomania"
+          /></a>
+          <nav>
+            <div class="header-lien">
+              <ul class="header-navigation">
+                <li class="nav-item">
+                  <a class="nav-link" href="accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="intramarket.html">IntraMarket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="intranetwork.html">IntraNetwork</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <button class="logout" type="button" name="logout">
+            Se déconnecter
+          </button>
         </div>
       </header>
 
       <main>
         <div id="page-form-network">
           <h1>Ajouter un message sur IntraNetwork</h1>
-        <div class="cadre">
+          <div class="cadre">
             <form method="post" name="form-network" id="form-network">
               <div class="form-group">
                 <label for="title-message">
@@ -82,14 +75,12 @@
                   Nouveau message
                 </label>
                 <textarea
-                  type="text"
                   id="new-message"
                   name="new-message"
                   class="form-control"
                   rows="10"
                   cols="50"
                   required
-                  autofocus
                   placeholder="Rédigez votre message ici..."
                 ></textarea>
               </div>
@@ -103,13 +94,8 @@
                   id="imageUrl"
                   name="imageUrl"
                   class="form-control"
-                  #imageInput (change)="onFileAdded($event)"
                 />
-                
-                <img [src]="imagePreview" *ngIf="imagePreview" style="max-height: 100px;display:block;margin-top:10px">
               </div>
-              
-
 
               <button id="valider-message" type="submit" name="valider-message">
                 valider votre message
@@ -124,7 +110,6 @@
           <p>Projet 7 - Parcours Developpeur Web - OpenClassrooms</p>
         </div>
       </footer>
-
     </div>
     <script src="../js/authFront.js"></script>
     <script src="../js/network.js"></script>
