@@ -1,6 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const helmet = require("helmet"); // Plugin qui permet de protéger l'application de certaines vulnérabilités en configurant de manière appropriée des en-têtes HTTP.
+//protection contre les attaques de type cross-site scripting et autres injections intersites
+//Protection contre les attaques de sniffing et clickjacking
 
 const userRoutes = require("./routes/user");
 const profilRoutes = require("./routes/profil");
@@ -24,6 +27,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use (helmet()); // L'application utilise toutes les protections helmet
 app.use(bodyParser.json());
 
 app.use("/images", express.static(path.join(__dirname, "images")));

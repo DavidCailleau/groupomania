@@ -93,6 +93,10 @@ input {
   width: 50%;
 }
 
+#format-password{
+  font-size: 0.7em;
+}
+
 /* PAGE ACCUEIL */
 
 .profil {

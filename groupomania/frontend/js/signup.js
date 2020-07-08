@@ -24,7 +24,7 @@ checkInput = () => {
     checkSpecialCharacter.test(nom) == true ||
     nom == ""
   ) {
-    checkMessage = "Veuillez vérifier ou renseigner votre nom";
+    checkMessage = "Veuillez vérifier les informations concernant votre nom. Les caractères spéciaux ou les chiffres ne sont pas autorisés";
   } else {
     console.log("Nom accepté");
   }
@@ -34,13 +34,13 @@ checkInput = () => {
     checkSpecialCharacter.test(prenom) == true ||
     prenom == ""
   ) {
-    checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre prénom";
+    checkMessage = checkMessage + "\n" + "Veuillez vérifier les informations concernant votre prénom. Les caractères spéciaux ou les chiffres ne sont pas autorisés";
   } else {
     console.log("Prénom accepté");
   }
   //Test du mail
   if (checkMail.test(email) == false) {
-    checkMessage = checkMessage + "\n" + "Vérifier/renseigner votre email";
+    checkMessage = checkMessage + "\n" + "Veuillez vérifier les informations concernant votre email. Les caractères spéciaux ne sont pas autorisés";
   } else {
     console.log("Adresse mail acceptée");
   }
@@ -86,7 +86,7 @@ function signup() {
           window.location = "../html/login.html";
           return response.json();
         } else {
-          alert("Email déjà existant");
+          alert("Le compte n'a pas pu être créé. L'email est déjà existant dans notre base de données ou le mot de passe renseigné ne correspond pas au format attendu.");
         }
       })
       .catch((error) => {

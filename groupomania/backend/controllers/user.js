@@ -1,9 +1,31 @@
 const connection = require('../connectionDbMysql');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const passwordValidator = require("password-validator"); //Package qui permet de compléxifier un mot de passe
+
+var schema = new passwordValidator();
+
+schema
+  .is()
+  .min(8) // Minimum 8 caractères
+  .is()
+  .max(20) // Maximum 20 caractères
+  .has()
+  .uppercase() // Le mot de passe doit avoir des majuscules
+  .has()
+  .lowercase() // Le mot de passe doit avoir des minuscules
+  .has()
+  .digits() // Le mot de passe doit avoir des chiffres
+  .has()
+  .not()
+  .spaces(); // Le mot de passe ne doit pas avoir d'espace
 
 
 exports.signup = (req, res, next) => {
+  if (!schema.validate(req.body.password)) {
+    //Test du format du mot de passe
+    throw { error: "Merci de bien vouloir entrer un mot de passe valide !" };
+  } else if (schema.validate(req.body.password)) {
   bcrypt
     .hash(req.body.password, 10)
     .then((hash) =>     {
@@ -24,7 +46,7 @@ exports.signup = (req, res, next) => {
         });
     })
     .catch(error => res.status(500).json({ error }));
-};
+}};
 
 
 exports.login = (req, res, next) => {
