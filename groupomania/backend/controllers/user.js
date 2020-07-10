@@ -24,7 +24,7 @@ schema
 exports.signup = (req, res, next) => {
   if (!schema.validate(req.body.password)) {
     //Test du format du mot de passe
-    throw { error: "Merci de bien vouloir entrer un mot de passe valide !" };
+    return res.status(400).json({ error: "Merci de bien vouloir entrer un mot de passe valide !" });
   } else if (schema.validate(req.body.password)) {
   bcrypt
     .hash(req.body.password, 10)
@@ -40,12 +40,12 @@ exports.signup = (req, res, next) => {
         {
             if(error)
             {
-                return res.status(500).json({ error: "mysql" });
+                return res.status(400).json({ error: "Problème requete" });
             }
             res.status(201).json({ message: 'Utilisateur créé !'});
         });
     })
-    .catch(error => res.status(500).json({ error }));
+    .catch(error => res.status(500).json({ error: "MySql" }));
 }};
 
 
@@ -59,7 +59,7 @@ exports.login = (req, res, next) => {
   const result = rows[0];
 
     if (!result) {
-      return res.status(401).json({
+      return res.status(404).json({
         error: "user non trouvé",
       });
     }
@@ -89,7 +89,7 @@ exports.login = (req, res, next) => {
         });
       })
       .catch((error) => {
-        res.status(400).json({
+        res.status(500).json({
           error: "Problème back end",
         });
       });

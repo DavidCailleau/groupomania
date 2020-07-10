@@ -144,7 +144,7 @@ exports.updateOneMessage = (req, res, next) => {
     }
     
       
-    res.status(201).json({ message: 'Message modifié !'});
+    res.status(200).json({ message: 'Message modifié !'});
   }
 );
 };

@@ -78,7 +78,7 @@ exports.updateOneArticle = (req, res, next) => {
     }
     
       
-    res.status(201).json({ message: 'Article modifié !'});
+    res.status(200).json({ message: 'Article modifié !'});
   }
 );
 };

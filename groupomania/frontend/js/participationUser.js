@@ -58,7 +58,7 @@ function getMessagesUser(messagesUser) {
       userPostMessage.setAttribute("class", "zone_texte");
       userPostTitle.setAttribute("class", "zone_title");
       userPostIllustration.setAttribute("class", "zone_image");
-      if (messagesUser.imageUrl !== undefined) {
+      if (messagesUser.Message_image_url !== undefined) {
         userPostPhoto.setAttribute("class", "image-network");
         userPostPhoto.setAttribute("src", messagesUser.Message_image_url);
         userPostPhoto.setAttribute("alt", "Photo du message");
@@ -77,9 +77,20 @@ function getMessagesUser(messagesUser) {
       userPostIllustration.appendChild(userPostPhoto);
 
       /* Contenu des balises index HTML */
+      let date = new Date(messagesUser.date_post);
+      let dateMessageUser =
+        date.getDate() +
+        "/" +
+        (date.getMonth() + 1) +
+        "/" +
+        date.getFullYear() +
+        " à " +
+        date.getHours() +
+        ":" +
+        ("0" + date.getMinutes()).slice(-2);
       userPostUserName.textContent =
         messagesUser.firstname + " " + messagesUser.lastname;
-      userPostDate.textContent = messagesUser.date_post;
+      userPostDate.textContent = dateMessageUser;
       userPostTitle.textContent = messagesUser.title;
       userPostMessage.textContent = messagesUser.message;
     });
